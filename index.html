@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Courses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(0.95);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(0.95);
+            }
+        }
+
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+
+            animation: zoomInOut 4s ease-in-out forwards;
+            transform-origin: center center;
+        }
+
+        .white-section {
+            background-color: white;
+            height: 80px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #FFD700;
+            width: 100%;
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            position: relative;
+        }
+
+        .image-container {
+            flex: 1;
+            position: relative;
+            margin-top: -70px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            background-color: hsl(0, 0%, 90%);
+            transition: background-color 300ms;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.2;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .credit {
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #000;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .image-container {
+                margin-top: -80px;
+                /* Adjust overlap for mobile */
+            }
+
+            .content {
+                align-items: center;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .white-section {
+                height: 100px;
+            }
+
+            .image-container {
+                margin-top: -60px;
+                /* Further adjust overlap for smaller screens */
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="white-section"></div>
+        <div class="card">
+            <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrYb7tg3TmCiJJFFHeNuM5tKy9GuKmqHpBnw&s"
+                    alt="Barista pouring latte art">
+            </div>
+            <div class="content">
+                <h2>Certified Coffee Courses</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <p class="credit">Image from <a href="www.unsplash.com">unsplash</a></p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
